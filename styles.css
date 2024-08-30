@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 nav {
@@ -24,7 +25,7 @@ nav ul li a {
 }
 
 header {
-    background-color: #555;
+    background-color: #8fd3aa; /* Mint */
     color: white;
     text-align: center;
     padding: 2em 0;
@@ -38,20 +39,39 @@ h1, h2 {
     color: #333;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
 }
 
-ul li {
-    margin: 0.5em 0;
+.project-box {
+    background-color: #e0e0e0; /* Light Gray */
+    border: 1px solid #ccc;
+    padding: 1em;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.2s;
 }
 
-ul li a {
-    color: #0066cc;
+.project-box:hover {
+    transform: scale(1.05);
+}
+
+.project-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.project-box a {
+    display: block;
+    margin-top: 1em;
     text-decoration: none;
+    color: #8fd3aa; /* Mint */
+    font-weight: bold;
 }
 
-ul li a:hover {
-    text-decoration: underline;
+.project-box a:hover {
+    color: #6da37b; /* Darker Mint */
 }
