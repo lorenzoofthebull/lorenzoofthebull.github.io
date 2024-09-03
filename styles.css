@@ -40,13 +40,13 @@ h1, h2 {
 }
 
 .final-project-tile {
-    max-width: 500px;
+    max-width: 300px;
     margin: 0 auto 2em;
 }
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller tiles */
     gap: 1em;
 }
 
