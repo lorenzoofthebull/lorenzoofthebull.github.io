@@ -39,11 +39,6 @@ h1, h2 {
     color: #333;
 }
 
-.project-tile{
-    max-width: 300px;
-    margin: 0 auto 2em;
-}
-
 .final-project-tile {
     max-width: 500px;
     margin: 0 auto 2em;
