@@ -55,7 +55,7 @@ h1, h2 {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2em;
 }
 
@@ -94,4 +94,16 @@ h1, h2 {
     font-weight: bold;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+}
+
+.prob-state h2{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.prob-state p{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
