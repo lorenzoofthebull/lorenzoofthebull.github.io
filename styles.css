@@ -50,13 +50,14 @@ h1, h2 {
 }
 
 .final-project-tile {
+    min-width: 300;
     max-width: 550px;
     margin: 0 auto 2em;
 }
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2em;
 }
 
