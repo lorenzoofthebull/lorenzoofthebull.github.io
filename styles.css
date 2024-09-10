@@ -61,13 +61,13 @@ h1, h2 {
     gap: 2em;
 }
 
-/*.project-grid {
+.project-grid {
     display: grid;
     grid-template-columns: auto auto auto;
   grid-gap: 1.5em;
   background-color: #ddeddd;
   padding: 10px;
-}*/
+}
 
 .project-tile, .final-project-tile {
     position: relative;
