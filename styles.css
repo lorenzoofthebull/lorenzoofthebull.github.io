@@ -51,14 +51,22 @@ h1, h2 {
 
 .final-project-tile {
     min-width: 300;
-    max-width: 550px;
+    max-width: 500px;
     margin: 0 auto 2em;
 }
 
-.project-grid {
+/*.project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2em;
+}*/
+
+.project-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  background-color: #ddeddd;
+  padding: 10px;
 }
 
 .project-tile, .final-project-tile {
