@@ -55,19 +55,19 @@ h1, h2 {
     margin: 0 auto 2em;
 }
 
-/*.project-grid {
+.project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2em;
-}*/
+}
 
-.project-grid {
+/*.project-grid {
     display: grid;
-    grid-template-columns: auto auto auto auto;
-  grid-gap: 10px;
+    grid-template-columns: auto auto auto;
+  grid-gap: 1.5em;
   background-color: #ddeddd;
   padding: 10px;
-}
+}*/
 
 .project-tile, .final-project-tile {
     position: relative;
