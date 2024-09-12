@@ -50,23 +50,23 @@ h1, h2 {
 }
 
 .final-project-tile {
-    min-width: 300;
+    min-width: 300px;
     max-width: 500px;
     margin: 0 auto 2em;
 }
 
-.project-grid {
+/*.project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2em;
-}
+}*/
 
 .project-grid {
     display: grid;
-    grid-template-columns: auto auto auto;
-  grid-gap: 1.5em;
-  background-color: #ddeddd;
-  padding: 10px;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 1.5em;
+    background-color: #ddeddd;
+    padding: 10px;
 }
 
 .project-tile, .final-project-tile {
@@ -171,4 +171,22 @@ h1, h2 {
 .button:hover {
     background-color: #44b471; /* Darker Mint */
     transform: scale(1.05);
+}
+
+
+
+
+@media (max-width: 768px) {
+    
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2em;
+    }
+    .about-section {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+    }
 }
