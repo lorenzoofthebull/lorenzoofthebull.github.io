@@ -61,7 +61,7 @@ p{
     margin-left: auto;
     margin-right: auto;
     width: 60%;
-    border-radius: 8px
+    border-radius: 8px;
   }
 
 .final-project-tile {
@@ -120,15 +120,6 @@ p{
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
-
-
-.prob-state p{
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-
 
 
 .about-section {
@@ -198,6 +189,18 @@ p{
 
 
 
+.row {
+    display: flex;
+  }
+  
+  .column {
+    align-items: center;
+    flex: 50%;
+    padding: 5px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 @media (max-width: 768px) {
     
