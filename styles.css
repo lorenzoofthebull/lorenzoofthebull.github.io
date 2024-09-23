@@ -193,7 +193,7 @@ p{
     display: flex;
   }
   
-  .column {
+.column {
     align-items: center;
     flex: 50%;
     padding: 5px;
@@ -201,6 +201,12 @@ p{
     margin-left: auto;
     margin-right: auto;
   }
+
+.column img {
+    border-radius: 8px;
+}
+
+
 
 @media (max-width: 768px) {
     
