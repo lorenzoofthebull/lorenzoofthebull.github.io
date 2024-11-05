@@ -23,9 +23,39 @@
     <main>
         <div>
             <h2>
-                
+                Prototyping
             </h2>
-            
+            <p>
+                While this page is being worked on, I am going to be recording how the prototyping process has gone thus far.
+            </p>
+            <p> 
+                We began by working on the lighting lystem. We procured two WS2812B LED Panels to use as lights for our small 
+                prototype, mimicking the light panels that we will have to use for the actual clinostat. I first went to ChatGPT 
+                to research how to program the board. This is where I learned about the Adafruit Neopixel library. After 
+                installing this and using the base code that ChatGPT suggested, my teammate Jack and I were able to turn the 
+                light on. However, of the 256 total LEDs in the 16x16 pixel display, only 64 turned on, and any attempt to 
+                change the color of the lights failed. After trouble shooting with the code, the LED panels, and the arduino 
+                board, we figured out that because the board was drawing too much power from the laptop that it was connected 
+                to to turn the LEDs on, the computer didn't recognize the port correctly and couldn't upload the code to the 
+                board. The lapptop also wasn't supplying enough power to turn on all the lights, as shown below. 
+            </p>
+            <img src="images/prototyping/prototype1.jpg" alt="prototype1" class="center">
+            <p>
+                After switching to a more powerful laptop and disconnecting the lights when uploading the code to the board, 
+                we were able to successfully turn on the LED panel, and even have it change colors. However, I believe it 
+                necessary to look into adding a relay to the circuit to take away the stress of the current from the arduino 
+                board and not risk it overheating or frying. After getting one panel to work, all that was necessary to add 
+                the other panel was to daisy chain it to the first panel and double to pixel count in the initial code. The 
+                next images show the single and double panel circuits.
+            </p>
+            <div class="row"> 
+                <div class="column">
+                    <img src="images/prototyping/prototype2.jpg" alt="prototype2" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="images/prototyping/prototype3.jpg" alt="prototype3" style="width:100%">
+                </div>
+            </div>
         </div>
     </main>
 </body>
