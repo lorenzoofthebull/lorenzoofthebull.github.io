@@ -22,17 +22,46 @@
     </header>
     <main>
         <div>
+            <p>
+                While this page is being worked on, I am going to be recording how the prototyping process has gone thus far.
+            </p>
             <h2>
                 Prototyping
             </h2>
             <p>
-                While this page is being worked on, I am going to be recording how the prototyping process has gone thus far.
+                October 24, 2024
+            </p>
+            <p>
+                After having recieved the RFP from  Fairchild about what they wanted us to create, my group sat down and broke 
+                down what we needed to start working on to two main issues: Motor control and LED control. I started working 
+                with the stepper motors that we ordered. This day was mainly spent getting one of the steppers to work with 
+                the ULN2003 driver board that the motors came with. I found a diagram online to wire the motor to an arduino, 
+                then I asked ChatGPT to gove me some base code. After seeing the motor work, the last thing I did was wire a 
+                second motor to the arduino to figure out next class how to get the two motors to work in tandem. 
+            </p>
+            <br>
+
+            <p>
+                October 28, 2024
+            </p>
+            <p>
+                Today was comprised of a lot of back and forth researching on how to get two servo motors to run in tandem using 
+                an arduino UNO R3. I went through several forums and asked ChatGPT for help with writing the code. Through this, 
+                I started going between two libraries on arduino IDE: Stepper.h and Accelstepper.h. The main issue I was having 
+                getting the two motors to spin at the same time in opposite directions. By the end of the day, I was only able 
+                get the motors to spin together in the same direction. 
+            </p>
+            <br>
+            
+            <p>
+                October 30, 2024
             </p>
             <p> 
-                We began by working on the lighting lystem. We procured two WS2812B LED Panels to use as lights for our small 
-                prototype, mimicking the light panels that we will have to use for the actual clinostat. I first went to ChatGPT 
-                to research how to program the board. This is where I learned about the Adafruit Neopixel library. After 
-                installing this and using the base code that ChatGPT suggested, my teammate Jack and I were able to turn the 
+                We began today by working on the lighting lystem. My team member Jack had been working slightly on this previously, 
+                however I joined him because he was having trouble getting started. We had procured two WS2812B LED Panels to use 
+                as lights for our small prototype, mimicking the light panels that we will have to use for the actual clinostat. 
+                I first went to ChatGPT to research how to program the board. This is where I learned about the Adafruit Neopixel 
+                library. After installing this and using the base code that ChatGPT suggested, Jack and I were able to turn the 
                 light on. However, of the 256 total LEDs in the 16x16 pixel display, only 64 turned on, and any attempt to 
                 change the color of the lights failed. After trouble shooting with the code, the LED panels, and the arduino 
                 board, we figured out that because the board was drawing too much power from the laptop that it was connected 
@@ -40,6 +69,11 @@
                 board. The lapptop also wasn't supplying enough power to turn on all the lights, as shown below. 
             </p>
             <img src="images/prototyping/prototype1.jpg" alt="prototype1" class="center">
+            <br>
+
+            <p>
+                November 1, 2024
+            </p>
             <p>
                 After switching to a more powerful laptop and disconnecting the lights when uploading the code to the board, 
                 we were able to successfully turn on the LED panel, and even have it change colors. However, I believe it 
@@ -56,6 +90,30 @@
                     <img src="images/prototyping/prototype3.jpg" alt="prototype3" style="width:100%">
                 </div>
             </div>
+            <br>
+
+            <p>
+                November 5, 2024
+            </p>
+            <p>
+                Today I was spent working with Mr. Perez on getting the motors to work properly. I decided to stick with using 
+                the Accelstepper.h library, as it gave me more control over the motors. After working for a bit, I was able to 
+                have the motors spin in tandem in opposite directions, which would allow the motors to spin the clinostat's body 
+                together, as the motors are facing each other in the design. However, I was only able to get the motors to spin 
+                back and forth between two set positions, between which the motors would accelerate to a certain speed and then 
+                slow down when they approached the set positions. Instead, I needed the motors to start spinning and not stop. 
+                I tried to code this in by using the motor.runSpeed() command, but this seemed to crash the code, cuasing the 
+                motors to not move at all. By the end of the day, I was only able to have the motors spin between positions, 
+                but more importantly I had the motors spinning in opposite directions, which was good progress. 
+            </p>
+            <br>
+
+            <p>
+                November 12
+            </p>
+            <p>
+                
+            </p>
         </div>
     </main>
 </body>
