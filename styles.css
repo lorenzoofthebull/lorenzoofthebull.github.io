@@ -75,6 +75,16 @@ p{
     background-color: #44b471;
   }
 
+  .video {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+    height: 450px;
+    border-radius: 2px;
+    background-color: #44b471;
+  }
+
 .centerlogo {
     display: block;
     margin-left: auto;

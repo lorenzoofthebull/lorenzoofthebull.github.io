@@ -66,9 +66,9 @@
                 change the color of the lights failed. After trouble shooting with the code, the LED panels, and the arduino 
                 board, we figured out that because the board was drawing too much power from the laptop that it was connected 
                 to to turn the LEDs on, the computer didn't recognize the port correctly and couldn't upload the code to the 
-                board. The lapptop also wasn't supplying enough power to turn on all the lights, as shown below. 
+                board. The laptop also wasn't supplying enough power to turn on all the lights, as shown below. 
             </p>
-            <img src="images/prototyping/prototype1.jpg" alt="prototype1" class="center">
+            <img src="images/LED/prototype1.jpg" alt="prototype1" class="center">
             <br>
 
             <p>
@@ -84,10 +84,10 @@
             </p>
             <div class="row"> 
                 <div class="column">
-                    <img src="images/prototyping/prototype2.jpg" alt="prototype2" style="width:100%">
+                    <img src="images/LED/prototype2.jpg" alt="prototype2" style="width:100%">
                 </div>
                 <div class="column">
-                    <img src="images/prototyping/prototype3.jpg" alt="prototype3" style="width:100%">
+                    <img src="images/LED/prototype3.jpg" alt="prototype3" style="width:100%">
                 </div>
             </div>
             <br>
@@ -102,7 +102,7 @@
                 together, as the motors are facing each other in the design. However, I was only able to get the motors to spin 
                 back and forth between two set positions, between which the motors would accelerate to a certain speed and then 
                 slow down when they approached the set positions. Instead, I needed the motors to start spinning and not stop. 
-                I tried to code this in by using the motor.runSpeed() command, but this seemed to crash the code, cuasing the 
+                I tried to code this in by using the motor.runSpeed() command, but this seemed to crash the code, causing the 
                 motors to not move at all. By the end of the day, I was only able to have the motors spin between positions, 
                 but more importantly I had the motors spinning in opposite directions, which was good progress. 
             </p>
@@ -115,14 +115,84 @@
                 Brainstorming or "think-tanking" was the main priority today. I took a step away from working on the stepper 
                 motors to sit down with my teammate Jose Zequeira and think of a solution for wiring. An issue I hadn't 
                 thought of before he brought it up was how the wires would remain untangled while the clinostat was spinning. 
-                We say for a while, considering different motor orientations or hollow axes that could make this possible. When 
-                our own brainstorming took to 
+                Jose had already found a solution to this: the <u>slip ring</u>. This device uses metal contacts rubbing against 
+                internal metal rings to transmit power and electrical signals from a stationary to a rotating structure. This 
+                fixed the first issue of wire control, however a new problem emerged: how to prevent the motor and wires from 
+                getting tangled. We considered different motor orientations or hollow axes that could make this possible, however 
+                we couldn't figure out a viable option. We shifted over to researching possible solutions, where I immediately 
+                went to youtube to find a video repesentation of a 3-dimensional clinostat. I went through several videos, 
+                studying the motion of the device as well as trying to figure our exactly what component was being used for the 
+                wiring with the motor, until I came across the video linked below. This video came up with a clever solution to 
+                our issue: offset the motor using gears. This idea perfectly solved the issue we were having with out preliminary 
+                design (however, we plan to use a through-bore slip ring in the future so that the motor right under the slip 
+                ring). After watching the rest of the video and seeing that the project was open source, we decided to use this 
+                3-d printable clinostat as our prototype, this was we could analyze the clinostat and see where we can improve 
+                or change certain things. 
             </p>
-            <iframe src="https://www.youtube.com/embed/watch?v=Wz8sjB6MxHA&list=PLF417q6jxrNGhaf3dwDleJvr8uQ5EOXwP" class="embed"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Wz8sjB6MxHA?si=f0ujTgEu_JveGapc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video"></iframe>
+            <br>
+
+            <P>
+                November 14
+            </P>
+            <P>
+                Once I looked into the Github for the online clinostat and Jose prepared all the g-code for the printers, we 
+                began printing all the necessary parts for the clinostat. While waiting for essentially the frame and gears to 
+                print, I gathered other necessary components: servo motors, a slip ring, and an Arduino UNO. However, these 
+                weren't entirely the correct components, as the servo motors only had 180° of movement, and the slip ring we 
+                ordered was the wrong size. Regardless, by the end of the day, I had all the necessary parts to build a functioning 
+                clinostat. 
+            </P>
             <br>
 
             <p>
-                December 6
+                November 17
+            </p>
+            <p>
+                I spent the late afternoon and evening today finalizing the initial prototype. This was more of an issue than I 
+                initially thought, as I was using the wrong size slip ring (I was using a 12.5 mm slip ring instead of the 
+                intended 15 mm slip ring). To solve this issue, I sanded down the slot which the slip ring would sit in so the 
+                smaller one would fit entirely. Then, I created a wooden peg with a hole in it to better support the wires. The 
+                issue here was that the larger slip ring had an extrusion that acted as an axis for the clinostat, while the 
+                smaller slip ring lacked this. The wooden peg alleviated the issue, as the wires now acted as a sort-of axis, 
+                however there were still issues with the gears on this axis slipping apart. To fix this temporarily while we 
+                waited for the correct parts, we flipped the clinostat upside down so that the gears fell into each other. Doing 
+                this, we were able to get the prototype working properly, albeit not well.
+            </p>
+            <br>
+
+            <p>
+                November 20, 22, and 25
+            </p>
+            <p>
+                These days were spent finalizing the initial prototype. On the 20<sup>th</sup>, Zequeira and I were able to find 
+                continuous rotating servo motors, which I quickly added onto the clinostat. The code for these motors is very 
+                simple, using the command myservo.write(98) to set the motors spinning at a slow speed in the counterclockwise 
+                direction. The 22<sup>nd</sup> was spent adding daily updates and overall housekeeping to my website. Finally, 
+                I receieved the correct slip ring in the mail on the 25<sup>th</sup>, so I spent the afternoon adding this 
+                slip ring to the prototype. This was the final piece needed to complete the initial prototype. As a bonus, I 
+                3D printed a holder for the arduino UNO and bread board that was being used.
+            </p>
+            <video controls="controls" width="800" height="600" name="Video Name" class="video">
+                <source src="videos/proto.MOV">
+            </video>
+            <br>
+
+            <p>
+                December 3
+            </p>
+            <p>
+                I revisited the LED panels, looking for a solution to the main issue: the arduino overheating because of the 
+                current pull of the LED panels. I trie working with a 5V relay to possibly fix the issue. After researching an 
+                electrical schematic for the relay, I went to wire everything together. However, I spent a long while soldering 
+                headers onto the necessary wires to make it easier to work with. Once this was done, I was able to set up most 
+                of the wiring, however the relay didn't fit into the bread board, and the period ended before I used wired to 
+                connect it to the rest of the board.
+            </p>
+            <br>
+
+            <p>
+                December 5 and 9
             </p>
             <iframe src="https://docs.google.com/document/d/e/2PACX-1vTpg3wy_orjb77xDis78A53Tlu1sVjY9fvjbl8iZjnvT-JuGtVsvEyVHrekqKV7tEQ8896GpqDPqRKI/pub?embedded=true" class="embed"></iframe>
 
